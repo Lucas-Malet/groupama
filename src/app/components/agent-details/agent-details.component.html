@@ -1,0 +1,101 @@
+<mat-card class="agent-card">
+    <mat-card-header>
+        <mat-card-title>Fiche de {{ agent!.name }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <!-- Première section : Informations générales -->
+        <div class="section general">
+            <div class="section-title">Informations générales</div>
+            <div class="section-content">
+                <div class="left">
+                    <!-- ID -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">badge</mat-icon>
+                        <span class="info-label">ID :</span>
+                        <span class="info-value">{{ agent!.id }}</span>
+                    </div>
+                
+                    <!-- Date de naissance -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">cake</mat-icon>
+                        <span class="info-label">Date de naissance :</span>
+                        <span class="info-value">{{ agent!.birthdayDate }}</span>
+                    </div>
+                
+                    <!-- Adresse -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">home</mat-icon>
+                        <span class="info-label">Adresse :</span>
+                        <span class="info-value">{{ agent!.address }}</span>
+                    </div>
+                
+                    <!-- Pays -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">public</mat-icon>
+                        <span class="info-label">Pays :</span>
+                        <span class="info-value">{{ agent!.country }}</span>
+                    </div>
+                
+                    <!-- Code postal -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">mail</mat-icon>
+                        <span class="info-label">Code Postal :</span>
+                        <span class="info-value">{{ agent!.postalCode }}</span>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="photo-container">
+                        <img class="agent-photo" [src]="'assets/images/' + agent!.photo" alt="Photo de {{ agent!.name }}" />
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Deuxième section : Contact -->
+        <div class="section contact">
+            <div class="section-title">Contact</div>
+            <div class="section-content">
+                <div class="left">
+                    <!-- Email -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">email</mat-icon>
+                        <span class="info-label">Email :</span>
+                        <span class="info-value">{{ agent!.email }}</span>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <!-- Téléphone -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">phone</mat-icon>
+                        <span class="info-label">Téléphone :</span>
+                        <span class="info-value">{{ agent!.phone }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troisième section : Opérationnel -->
+
+        <div class="section operational">
+            <div class="section-title">Opérationnel</div>
+            <div class="section-content">
+                <div>
+                    <!-- Vacances -->
+                    <div class="info-item">
+                        <mat-icon class="info-icon">event</mat-icon>
+                        <span class="info-label">Vacances :</span>
+                        <span class="info-value">{{ agent!.holidaysStartDate | date:'dd/MM/yyyy' }} - {{ agent!.holidaysEndDate | date:'dd/MM/yyyy' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <mat-icon class="info-icon">assignment</mat-icon>
+                        <span class="info-label">Nombre de rapports :</span>
+                        <span class="info-value">{{ nbReports }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

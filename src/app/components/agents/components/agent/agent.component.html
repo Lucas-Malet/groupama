@@ -1,0 +1,30 @@
+<mat-card class="agent-card">
+    <mat-card-header>
+      <div class="avatar-container">
+        <mat-icon class="avatar">person</mat-icon>
+      </div>
+      <mat-card-title>{{ agent.name }}</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <div class="agent-info">
+        <div class="info-item">
+          <mat-icon class="info-icon">badge</mat-icon>
+          <span class="info-label">ID de l'Agent :</span>
+          <span class="info-value">{{ agent.id }}</span>
+        </div>
+        <div class="info-item">
+          <mat-icon class="info-icon">assignment</mat-icon>
+          <span class="info-label">Nombre de rapport :</span>
+          <span class="info-value">{{ count[agent.id] }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  
+    <mat-card-actions>
+        <button mat-stroked-button [routerLink]="['/agent', agent.id]">
+          Dossier agent
+        </button>
+    </mat-card-actions>
+  </mat-card>
+  

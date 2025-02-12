@@ -1,0 +1,38 @@
+.row-add {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.col-add {
+    width: 45%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.add-mission-dialog-content {
+    height: 350px;
+}
+
+.add-mission-dialog-actions {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 75px;
+    padding-right: 20px;
+}
+
+.add-mission-dialog-title {
+    height: 75px;
+}
+
+.no-resize {
+    resize: none !important;
+  }

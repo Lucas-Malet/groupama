@@ -1,0 +1,28 @@
+<div class="container">
+    @if (agent) {
+        <div class="first-row">
+            <div class="infos">
+                <app-agent-details [agent]="agent" [nbReports]="agentStore.reportsCountByAgent()[agent!.id]"/>
+            </div>
+            <div class="reports">
+                <app-reports [agentId]="agent.id"/>
+            </div>
+        </div>
+    } @else {
+        <mat-card class="error-card">
+            <mat-card-header>
+                <mat-card-title>Erreur</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>L'agent demandé n'existe pas.</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-stroked-button routerLink="/">Retour à l'accueil</button>
+            </mat-card-actions>
+        </mat-card>
+    }
+</div>
+
+<button mat-icon-button class="back-button" routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+</button>

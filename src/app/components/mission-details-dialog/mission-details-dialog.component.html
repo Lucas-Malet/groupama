@@ -1,0 +1,15 @@
+<div mat-dialog-title class="details-mission-dialog-title">
+    <h2>Détails de la mission</h2>
+</div>
+<div mat-dialog-content class="details-mission-dialog-content">
+    <div class="container">
+        <mat-form-field appearance="outline" class="description" fullWidth>
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="data.description" rows="13" class="no-resize" readonly #textarea></textarea>
+        </mat-form-field>
+    </div>
+</div>
+
+<div mat-dialog-actions class="details-mission-dialog-actions">
+    <button mat-button (click)="close()">Fermer</button>
+</div>

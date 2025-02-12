@@ -1,0 +1,70 @@
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    padding: 0%;
+}
+
+.error-card {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+    mat-card-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    mat-card-header {
+        background-color: #3f51b5;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0;
+        margin: 0px;
+        height: 50px;
+    }
+    
+    .mat-button {
+        text-transform: none;
+    }
+
+    button {
+        color: #3f51b5;
+        background-color: white;
+        height: 28px;
+    }
+}
+
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+
+    .infos {
+        width: 40%;
+    }
+
+    .reports {
+        width: 55%;
+    }
+}
+
+.back-button {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: #3f51b5;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    mat-icon {
+        color: white;
+    }
+}

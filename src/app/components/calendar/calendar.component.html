@@ -1,0 +1,13 @@
+@if (missionStore.loading()) {
+    <mat-spinner></mat-spinner>
+} @else {
+    <mat-card class="calendar-card">
+        <mat-card-header>
+            <mat-card-title>Planning général</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+            <full-calendar [options]="calendarOptions"></full-calendar>
+        </mat-card-content>
+    </mat-card>
+}

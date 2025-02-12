@@ -1,0 +1,56 @@
+<div mat-dialog-title class="add-mission-dialog-title">
+    <h2>Ajouter une mission</h2>
+</div>
+<div mat-dialog-content class="add-mission-dialog-content">
+
+    <div class="row-add">
+        <!-- Titre -->
+        <div class="col-add">
+            <mat-form-field appearance="outline" fullWidth>
+                <mat-label>Titre</mat-label>
+                <input matInput [(ngModel)]="mission.title">
+            </mat-form-field>
+        </div>
+        <!-- Code couleur -->
+        <div class="col-add">
+            <mat-form-field appearance="outline" fullWidth>
+                <mat-label>Code couleur</mat-label>
+                <input matInput [(ngModel)]="mission.color" type="color">
+            </mat-form-field>
+        </div>
+    </div>
+    
+    <div class="row-add">
+        <!-- Date de début -->
+        <div class="col-add">
+            <mat-form-field appearance="outline" fullWidth>
+                <mat-label>Début</mat-label>
+                <input matInput [matDatepicker]="startPicker" [(ngModel)]="mission.startDate" (dateChange)="updateDateFormat('startDate', $event)">
+                <mat-datepicker-toggle matIconSuffix [for]="startPicker"></mat-datepicker-toggle>
+                <mat-datepicker #startPicker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <!-- Date de fin -->
+        <div class="col-add">
+            <mat-form-field appearance="outline" fullWidth>
+                <mat-label>Fin</mat-label>
+                <input matInput [matDatepicker]="endPicker" [(ngModel)]="mission.endDate" (dateChange)="updateDateFormat('endDate', $event)">
+                <mat-datepicker-toggle matIconSuffix [for]="endPicker"></mat-datepicker-toggle>
+                <mat-datepicker #endPicker></mat-datepicker>
+            </mat-form-field>
+        </div>   
+    </div> 
+
+    <div class="row-add">
+        <!-- Description -->
+        <mat-form-field appearance="outline" fullWidth>
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="mission.description" rows="7" class="no-resize"></textarea>
+        </mat-form-field>
+    </div>
+</div>
+
+<div mat-dialog-actions class="add-mission-dialog-actions">
+    <button mat-button (click)="close()">Annuler</button>
+    <button mat-button color="primary" (click)="save()">Ajouter</button>
+</div>

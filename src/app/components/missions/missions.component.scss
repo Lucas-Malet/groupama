@@ -1,0 +1,84 @@
+.mission-card {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+
+  mat-card-title {
+      font-size: 16px;
+      font-weight: 500;
+  }
+
+  mat-card-header {
+      background-color: #3f51b5;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0;
+      height: 50px;
+
+      button{
+        color: #3f51b5;
+        background-color: white;
+        height: 28px;
+      }
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th, td {
+    background-color: #f5f5f5;
+  }
+  
+  .mat-button {
+    text-transform: none;
+  }
+
+  .color-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+  }
+}
+
+.mat-button-toggle-appearance-standard.mat-button-toggle-checked {
+  background-color: white !important;
+  color: #3f51b5 !important;
+}
+
+.mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard + .mat-button-toggle-appearance-standard {
+  border-left: solid 1px #3f51b5 !important;
+}
+
+.mat-button-toggle-standalone.mat-button-toggle-appearance-standard, .mat-button-toggle-group-appearance-standard {
+  border: solid 1px #3f51b5 !important;
+}
+
+.mat-button-toggle-appearance-standard {
+  color: #3f51b5 !important;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  height: 50px;
+}
+
+mat-paginator {
+  margin-top: auto;
+}
+
+mat-card-content{
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+}

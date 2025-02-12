@@ -1,0 +1,70 @@
+<mat-card class="mission-card">
+  <mat-card-header class="header">
+    <mat-card-title>Missions</mat-card-title>
+    <button mat-stroked-button (click)="openAddMissionDialog()">
+      <mat-icon>add</mat-icon>
+      Ajouter une mission
+    </button>
+  </mat-card-header>
+
+  <mat-card-content>
+    <!-- Boutons de filtre -->
+     <div class="filter-buttons">
+        <mat-button-toggle-group #filter (change)="filterMissions($event)">
+          <mat-button-toggle mat-stroked-button value="all">Toutes</mat-button-toggle>
+          <mat-button-toggle mat-stroked-button value="upcoming">À venir</mat-button-toggle>
+          <mat-button-toggle mat-stroked-button value="inProgress">En cours</mat-button-toggle>
+          <mat-button-toggle mat-stroked-button value="completed">Terminées</mat-button-toggle>
+        </mat-button-toggle-group>
+     </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Coueleur -->
+      <ng-container matColumnDef="color">
+          <th mat-header-cell *matHeaderCellDef>Couleur</th>
+          <td mat-cell *matCellDef="let mission">
+          <span class="color-circle" [style.background-color]="mission.color"></span>
+          </td>
+      </ng-container>
+
+      <!-- Titre -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>Titre</th>
+        <td mat-cell *matCellDef="let mission">{{ mission.title }}</td>
+      </ng-container>
+
+      <!-- Date de début -->
+      <ng-container matColumnDef="startDate">
+        <th mat-header-cell *matHeaderCellDef>Début</th>
+        <td mat-cell *matCellDef="let mission">
+          {{ mission.startDate | date:'dd/MM/yyyy' }}
+        </td>
+      </ng-container>
+
+      <!-- Date de fin -->
+      <ng-container matColumnDef="endDate">
+        <th mat-header-cell *matHeaderCellDef>Fin</th>
+        <td mat-cell *matCellDef="let mission">
+          {{ mission.endDate | date:'dd/MM/yyyy' }}
+        </td>
+      </ng-container>
+
+      <!-- Actions -->
+      <ng-container matColumnDef="details">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let mission">
+          <button mat-button color="primary" (click)="openMissionDetailsDialog(mission.description)">
+            Détails
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Header & Rows -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+    <!-- Paginator -->
+    <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
+  </mat-card-content>
+</mat-card>

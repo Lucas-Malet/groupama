@@ -1,0 +1,88 @@
+.agent-card {
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+    mat-card-header {
+        background-color: #3f51b5;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding-top: 0;
+        height: 50px;
+    }
+
+    .avatar-container {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 7px; 
+        right: 16px; 
+        background-color: #ffffff;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .avatar {
+        font-size: 24px;
+        color: #3f51b5;
+    }
+
+    mat-card-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .agent-info {
+        margin-top: 13px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .info-icon {
+        color: #3f51b5;
+        margin-right: 8px;
+    }
+
+    .info-label {
+        font-weight: 600;
+        font-size: 13px;
+        color: #555;
+        margin-right: 5px;
+    }
+
+    .info-value {
+        font-size: 14px;
+        color: #333;
+    }
+
+    mat-card-actions {
+        text-align: center;
+        display: flex;
+        justify-content: end;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding: 0px;
+        padding-top: 10px;
+        gap: 10px;
+    }
+
+    button {
+        width: 50%;
+        color: #3f51b5;
+        background-color: white;
+        height: 28px;
+    }
+}

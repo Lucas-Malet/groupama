@@ -1,0 +1,102 @@
+.agent-card {
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+
+    mat-card-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    mat-card-header {
+        background-color: #3f51b5;
+        color: white;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .agent-info {
+        margin-top: 13px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .info-icon {
+        color: #3f51b5;
+        margin-right: 8px;
+    }
+
+    .info-label {
+        font-weight: 600;
+        font-size: 13px;
+        color: #555;
+        margin-right: 5px;
+    }
+
+    .info-value {
+        font-size: 14px;
+        color: #333;
+    }
+    
+    .mat-button {
+        text-transform: none;
+    }
+
+    /* Section Layout */
+    .section-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 5px;
+    }
+
+    .section-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left, .right {
+        width: 50%;
+    }
+
+    .photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .agent-photo {
+        width: 125px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    mat-card-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .general {
+        height: 210px;
+    }
+
+    .contact {
+        height: 100px;
+    }
+
+    .operational {
+        height: 100px;
+    }
+}

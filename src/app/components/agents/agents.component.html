@@ -1,0 +1,9 @@
+@if (agentStore.loading()) {
+    <mat-spinner></mat-spinner>
+} @else {
+<div class="agents-container">
+    @for (agent of agentStore.agents(); track agent.id) {
+    <app-agent [agent]="agent" [count]="count"></app-agent>
+    }
+</div>
+}
