@@ -1,17 +1,17 @@
-<div mat-dialog-title class="add-report-dialog-title">
+<div class="add-report-dialog-title">
     <h2>Ajouter un rapport</h2>
 </div>
-<div mat-dialog-content class="add-report-dialog-content">
+<div class="add-report-dialog-content">
 
     <div class="row-add">
-        <!-- Titre -->
+
         <div class="col-add">
             <mat-form-field appearance="outline" fullWidth>
                 <mat-label>Titre</mat-label>
                 <input matInput [(ngModel)]="report.title">
             </mat-form-field>
         </div>
-        <!-- Mission -->
+
         <div class="col-add">
             <mat-form-field appearance="outline" fullWidth>
                 <mat-label>Mission</mat-label>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="row-add">
-        <!-- Description -->
+
         <mat-form-field appearance="outline" fullWidth>
             <mat-label>Contenu</mat-label>
             <textarea matInput [(ngModel)]="report.body" rows="10" class="no-resize"></textarea>
